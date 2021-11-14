@@ -91,7 +91,7 @@ class LowCardinalityTest extends BaseTest
         $this->assertEquals(
             Report::STATUS_WARNING,
             $check->run($this->lowCardinalityIndex)->getStatus(),
-            "Ensure that an OK report is returned for $this->lowCardinalityIndex with a large table."
+            "Ensure that an WARNING report is returned for $this->lowCardinalityIndex with a large table."
         );
 
         $this->lowCardinalityIndex->setTable($this->mediumTable);
@@ -99,7 +99,7 @@ class LowCardinalityTest extends BaseTest
         $this->assertEquals(
             Report::STATUS_CONCERN,
             $check->run($this->lowCardinalityIndex)->getStatus(),
-            "Ensure that an OK report is returned for $this->lowCardinalityIndex with a medium table."
+            "Ensure that an CONCERN report is returned for $this->lowCardinalityIndex with a medium table."
         );
 
         $this->lowCardinalityIndex->setTable($this->smallTable);
