@@ -29,6 +29,9 @@ use Doctrine\DBAL\Exception\InvalidFieldNameException;
 use Psr\Log\LoggerAwareTrait;
 use Psr\Log\NullLogger;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Factory
 {
     use LoggerAwareTrait;
